@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="services__lines" viewBox="0 0 900 700" preserveAspectRatio="none" aria-hidden="true">
+<!-- diagonal family — same slope, staggered draw-in -->
+<line x1="-60" y1="700" x2="340" y2="0" stroke="#1C2431" stroke-width="1" style="--len:806.2; --delay:0s" opacity="0.5"></line>
+<line x1="60" y1="700" x2="460" y2="0" stroke="#1C2431" stroke-width="1" style="--len:806.2; --delay:.08s" opacity="0.6"></line>
+<line x1="180" y1="700" x2="580" y2="0" stroke="#1C2431" stroke-width="1" style="--len:806.2; --delay:.16s" opacity="0.5"></line>
+<line x1="300" y1="700" x2="700" y2="0" stroke="#1C2431" stroke-width="1" style="--len:806.2; --delay:.24s" opacity="0.6"></line>
+<line x1="420" y1="700" x2="820" y2="0" stroke="#E8112D" stroke-width="1" style="--len:806.2; --delay:.32s" opacity="0.8"></line>
+
+<!-- crossing grid lines -->
+<line x1="0" y1="180" x2="900" y2="140" stroke="#1C2431" stroke-width="1" style="--len:901.1; --delay:.4s" opacity="0.45"></line>
+<line x1="0" y1="480" x2="900" y2="440" stroke="#1C2431" stroke-width="1" style="--len:901.1; --delay:.48s" opacity="0.45"></line>
+
+<!-- connection nodes -->
+<circle cx="600" cy="140" r="3" fill="#E8112D" style="--delay:.9s"></circle>
+<circle cx="520" cy="440" r="3" fill="#E8112D" style="--delay:1.05s"></circle>
+</svg>
