@@ -1,6 +1,10 @@
-import { Project } from './project.types';
-import { projects } from '@/data/project';
+import { Project } from '@/features/project/project.types';
+import { selectedProjectsImages, projects } from '@/data/project';
 
 export async function getProjects(): Promise<Project[]> {
   return projects;
+}
+
+export async function getSelectedProjectsImages(): Promise<string[]> {
+  return selectedProjectsImages;
 }

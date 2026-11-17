@@ -11,13 +11,15 @@ const modeClasses = {
 export default function Section({
   children,
   mode = 'grid',
+  className = '',
 }: Readonly<{
   children: React.ReactNode;
   mode?: keyof typeof modeClasses;
+  className?: string;
 }>) {
   return (
     <section
-      className={`w-full flex items-center justify-center px-8 py-32 border-b border-solid border-dark-secondary ${modeClasses[mode]}`}
+      className={`w-full flex items-center justify-center px-8 py-32 border-b border-solid border-dark-secondary ${modeClasses[mode]} ${className}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}

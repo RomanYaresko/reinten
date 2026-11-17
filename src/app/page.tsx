@@ -2,6 +2,7 @@ import BookingButton from '@/components/booking/BookingButton';
 import EmployeeBlock from '@/components/employee/EmployeeBlock';
 import ProjectCard from '@/components/project/ProjectCard';
 import ImageBlock from '@/components/ui/ImageBlock';
+import Marquee from '@/components/ui/Marquee';
 import ObjectionBlock from '@/components/ui/ObjectionBlock';
 import Section from '@/components/ui/Section';
 import StepBlock from '@/components/ui/StepBlock';
@@ -9,7 +10,7 @@ import Table from '@/components/ui/Table';
 import TextBlocks from '@/components/ui/TextBlocks';
 import { getEmployees, getFounder } from '@/features/employee/employee.service';
 import { getOffers } from '@/features/offer/offer.service';
-import { getProjects } from '@/features/project/project.service';
+import { getProjects, getSelectedProjectsImages } from '@/features/project/project.service';
 import { getStacks } from '@/features/stack/stack.service';
 
 export default async function MainPage() {
@@ -17,20 +18,23 @@ export default async function MainPage() {
   const employees = await getEmployees();
   const stacks = await getStacks();
   const projects = await getProjects();
+  const selectedProjectsImages = await getSelectedProjectsImages();
   const founder = await getFounder();
 
   return (
     <>
-      <Section>
+      <Section className="min-h-[calc(100vh-85px)]">
         <div className="w-full flex flex-col items-start justify-center gap-8">
-          <h1 className="text-5xl font-bold text-light-primary">
-            We build software and keep it running.
+          <h1 className="text-4xl md:text-5xl font-bold text-light-primary">
+            Custom Software. Reliable Infrastructure. One Expert Team.
           </h1>
-          <p className="max-w-3xl text-light-secondary text-lg">
-            Custom software and the infrastructure it runs on — from one team. You work directly
-            with the engineers who build it: no account managers, no handoffs.
+          <p className="text-base md:text-lg max-w-3xl text-light-secondary">
+            We build custom software, manage the infrastructure behind it, and keep everything
+            running. One team, direct communication, no handoffs.
           </p>
           <BookingButton />
+          <div className="w-full border-b border-dark-secondary mx-4" />
+          <Marquee images={selectedProjectsImages} />
         </div>
       </Section>
 
