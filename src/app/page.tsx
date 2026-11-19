@@ -72,7 +72,7 @@ export default async function MainPage() {
             {employees.map((employee) => (
               <ImageBlock
                 key={employee.id}
-                src={employee.photo}
+                src={employee.image}
                 title={`${employee.firstName} ${employee.lastName}`}
                 subtitle={employee.description}
                 linkTitle="LinkedIn →"

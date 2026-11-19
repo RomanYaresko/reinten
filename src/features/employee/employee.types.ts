@@ -1,6 +1,6 @@
 export interface Employee {
   id: number;
-  photo: string;
+  image: string;
   firstName: string;
   lastName: string;
   description: string;

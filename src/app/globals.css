@@ -6,9 +6,11 @@
 
   --color-dark-primary: #080B12;
   --color-dark-secondary: #1C2431;
+  --color-dark-dimmed: #7B858F;
 
   --color-light-primary: #F2F4F6;
   --color-light-secondary: #A8B2BC;
+  --color-light-line: #D8DCD9;
 
   --color-accent: #E8112D;
 }

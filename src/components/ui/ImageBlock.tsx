@@ -15,7 +15,7 @@ export default function ImageBlock({ src, title, subtitle, linkTitle, link }: Im
       <div className="relative aspect-square w-full overflow-hidden mb-8">
         <Image
           src={src}
-          alt={title ? `Photo of ${title}` : 'Photo'}
+          alt={title ? `Image of ${title}` : 'Image'}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"

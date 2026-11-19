@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 
 const modeClasses = {
   grid: 'bg-grid bg-dark-primary',
+  secondary: 'bg-grid bg-[#0E131C]',
   accent: 'bg-grid-accent bg-dark-primary',
   white: 'bg-light-primary',
 } as const;

@@ -3,7 +3,7 @@ import { Employee } from '@/features/employee/employee.types';
 export const employees: Employee[] = [
   {
     id: 1,
-    photo: '/data/vitaliy-prymak.jpg',
+    image: '/data/employee/vitaliy-prymak.jpg',
     firstName: 'Vitaliy',
     lastName: 'Prymak',
     description: 'Founder, DevOps engineer',
@@ -12,7 +12,7 @@ export const employees: Employee[] = [
   },
   {
     id: 2,
-    photo: '/data/mykyta-diadiunov.jpg',
+    image: '/data/employee/mykyta-diadiunov.jpg',
     firstName: 'Mykyta',
     lastName: 'Diadiunov',
     description: 'Engineer',
@@ -21,7 +21,7 @@ export const employees: Employee[] = [
   },
   {
     id: 3,
-    photo: '/data/serhii-kolodiazhnyi.jpg',
+    image: '/data/employee/serhii-kolodiazhnyi.jpg',
     firstName: 'Serhii',
     lastName: 'Kolodiazhnyi',
     description: 'Engineer',
