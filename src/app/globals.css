@@ -18,6 +18,11 @@
   --color-accent: #E8112D;
 }
 
+:root {
+  --services-lines-url: '';
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -65,7 +70,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url('/images/servicesLines.svg') no-repeat;
+  background: var(--services-lines-url) no-repeat;
   background-size: 100% 100%;
   content: '';
   pointer-events: none;

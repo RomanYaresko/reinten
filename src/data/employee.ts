@@ -1,9 +1,10 @@
 import { Employee } from '@/features/employee/employee.types';
+import { assetPath } from '@/lib/paths';
 
 export const employees: Employee[] = [
   {
     id: 1,
-    image: '/data/employee/vitaliy-prymak.jpg',
+    image: assetPath('/data/employee/vitaliy-prymak.jpg'),
     firstName: 'Vitaliy',
     lastName: 'Prymak',
     description: 'Founder, DevOps engineer',
@@ -12,7 +13,7 @@ export const employees: Employee[] = [
   },
   {
     id: 2,
-    image: '/data/employee/mykyta-diadiunov.jpg',
+    image: assetPath('/data/employee/mykyta-diadiunov.jpg'),
     firstName: 'Mykyta',
     lastName: 'Diadiunov',
     description: 'Engineer',
@@ -21,7 +22,7 @@ export const employees: Employee[] = [
   },
   {
     id: 3,
-    image: '/data/employee/serhii-kolodiazhnyi.jpg',
+    image: assetPath('/data/employee/serhii-kolodiazhnyi.jpg'),
     firstName: 'Serhii',
     lastName: 'Kolodiazhnyi',
     description: 'Engineer',

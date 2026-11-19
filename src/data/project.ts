@@ -1,4 +1,5 @@
 import { Project, ProjectDetails } from '@/features/project/project.types';
+import { assetPath } from '@/lib/paths';
 
 export const projects: Project[] = [
   {
@@ -7,7 +8,7 @@ export const projects: Project[] = [
     subtitle: 'Bookings and the client base lived in scattered notes — nothing was automated.',
     description:
       'Built a CRM with online booking and a sales website in 3 months. Running without failures since March 2026.',
-    image: '/data/project/salon-home.webp',
+    image: assetPath('/data/project/salon-home.webp'),
     projectDetailsSlug: 'beauty-salon',
   },
   {
@@ -63,7 +64,7 @@ export const projectDetails: ProjectDetails[] = [
       ],
       images: [
         {
-          src: '/data/project/salon-square.webp',
+          src: assetPath('/data/project/salon-square.webp'),
           title: 'Online Shop',
           ratio: {
             x: 1,
@@ -71,7 +72,7 @@ export const projectDetails: ProjectDetails[] = [
           },
         },
         {
-          src: '/data/project/salon-phone.webp',
+          src: assetPath('/data/project/salon-phone.webp'),
           title: 'Website',
           ratio: {
             x: 9,
@@ -79,7 +80,7 @@ export const projectDetails: ProjectDetails[] = [
           },
         },
         {
-          src: '/data/project/salon-wide.webp',
+          src: assetPath('/data/project/salon-wide.webp'),
           title: 'CRM',
           ratio: {
             x: 16,
