@@ -6,12 +6,12 @@ type TextBlocksProps = Readonly<{
 export default function TextBlocks({ title, list }: TextBlocksProps) {
   return (
     <div className="flex flex-col gap-6">
-      <h3 className="font-code text-sm text-light-primary">{title}</h3>
+      <h3 className="font-code text-[13px]/[1] text-light-tertiary">{title}</h3>
       <ul className="flex flex-wrap gap-4">
         {list.map((item) => (
           <li
             key={item}
-            className="border border-dark-secondary px-4 py-2 font-code text-sm text-light-secondary text-code"
+            className="border border-dark-subtle px-4 py-2 font-code text-[12px]/[1] text-light-tertiary text-code"
           >
             {item}
           </li>

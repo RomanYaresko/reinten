@@ -19,7 +19,7 @@ export default function Marquee({ images }: MarqueeProps) {
               alt="Marquee item"
               width={1000}
               height={600}
-              className="h-auto max-h-40 w-auto max-w-none rounded border border-dark-secondary"
+              className="h-auto max-h-40 w-auto max-w-none rounded border border-dark-subtle"
               unoptimized
             />
           </div>

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
   description: '--Change DESCRIPTION HERE',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+type RootLayoutProps = Readonly<{
   children: React.ReactNode;
-}>) {
+}>;
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${spaceGrotesk.variable} ${IBMPlexMono.variable}`}>

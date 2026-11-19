@@ -9,23 +9,27 @@ const modeClasses = {
   white: 'bg-light-primary',
 } as const;
 
+type SectionProps = Readonly<{
+  children: React.ReactNode;
+  mode?: keyof typeof modeClasses;
+  className?: string;
+  viewportAmount?: number;
+}>;
+
 export default function Section({
   children,
   mode = 'grid',
   className = '',
-}: Readonly<{
-  children: React.ReactNode;
-  mode?: keyof typeof modeClasses;
-  className?: string;
-}>) {
+  viewportAmount = 0.2,
+}: SectionProps) {
   return (
     <section
-      className={`w-full flex items-center justify-center px-8 py-32 border-b border-solid border-dark-secondary ${modeClasses[mode]} ${className}`}
+      className={`w-full flex items-center justify-center px-8 py-32 border-b border-dark-subtle ${modeClasses[mode]} ${className}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: viewportAmount }}
         transition={{
           duration: 0.5,
           ease: 'easeOut',

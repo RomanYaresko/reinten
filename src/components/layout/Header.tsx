@@ -1,15 +1,22 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
-    <header className="w-full flex items-center justify-center bg-dark-primary p-8 border-b border-solid border-dark-secondary">
-      <div className="w-full max-w-244 flex justify-between text-sm tracking-widest font-code">
+    <header className="w-full flex items-center justify-center bg-dark-primary p-8 border-b border-dark-subtle">
+      <div className="w-full max-w-244 flex justify-between text-[13px] tracking-widest font-code">
         <Link href="/" className="text-light-primary ">
           REINTEN TECH
         </Link>
-        <Link href="/" className="text-light-secondary hover:text-light-primary duration-300">
-          ← All work
-        </Link>
+        {pathname !== '/' && (
+          <Link href="/" className="text-light-tertiary hover:text-light-primary duration-300">
+            ← All work
+          </Link>
+        )}
       </div>
     </header>
   );

@@ -4,13 +4,16 @@
   --font-primary: var(--font-space-grotesk);
   --font-code: var(--font-ibm-plex-mono);
 
-  --color-dark-primary: #080B12;
-  --color-dark-secondary: #1C2431;
-  --color-dark-dimmed: #7B858F;
+  --color-dark-primary:   #080B12;
+  --color-dark-secondary: #0D1117;
+  --color-dark-tertiary:  #0E131C;
+  --color-dark-subtle:    #1C2431;
+  --color-dark-muted:     #4C555E;
 
-  --color-light-primary: #F2F4F6;
-  --color-light-secondary: #A8B2BC;
-  --color-light-line: #D8DCD9;
+  --color-light-primary:   #F4F5F3;
+  --color-light-secondary: #D8DCD9;
+  --color-light-tertiary:  #A8B2BC;
+  --color-light-muted:     #7B858F;
 
   --color-accent: #E8112D;
 }
@@ -29,12 +32,12 @@ body {
   background-image:
     linear-gradient(
       to right,
-      color-mix(in srgb, var(--color-dark-secondary) 60%, transparent) 1px,
+      color-mix(in srgb, var(--color-dark-subtle) 60%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       to bottom,
-      color-mix(in srgb, var(--color-dark-secondary) 60%, transparent) 1px,
+      color-mix(in srgb, var(--color-dark-subtle) 60%, transparent) 1px,
       transparent 1px
     );
   background-size: 64px 64px;
@@ -47,12 +50,12 @@ body {
   background-image:
     linear-gradient(
       to right,
-      color-mix(in srgb, var(--color-dark-secondary) 60%, transparent) 1px,
+      color-mix(in srgb, var(--color-dark-subtle) 60%, transparent) 1px,
       transparent 1px
     ),
     linear-gradient(
       to bottom,
-      color-mix(in srgb, var(--color-dark-secondary) 60%, transparent) 1px,
+      color-mix(in srgb, var(--color-dark-subtle) 60%, transparent) 1px,
       transparent 1px
     );
   background-size: 64px 64px;

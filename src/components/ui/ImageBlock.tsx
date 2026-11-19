@@ -12,7 +12,7 @@ type ImageBlockProps = Readonly<{
 export default function ImageBlock({ src, title, subtitle, linkTitle, link }: ImageBlockProps) {
   return (
     <div className="flex flex-1 min-w-0 flex-col">
-      <div className="relative aspect-square w-full overflow-hidden mb-8">
+      <div className="relative aspect-square w-full overflow-hidden mb-6">
         <Image
           src={src}
           alt={title ? `Image of ${title}` : 'Image'}
@@ -23,10 +23,10 @@ export default function ImageBlock({ src, title, subtitle, linkTitle, link }: Im
         />
       </div>
 
-      {title && <span className="text-base font-bold text-dark-primary mb-2">{title}</span>}
-      {subtitle && <span className="text-sm text-dark-secondary mb-4">{subtitle}</span>}
+      {title && <span className="text-[17px]/[1] font-bold text-dark-primary mb-2">{title}</span>}
+      {subtitle && <span className="text-[14px]/[1] text-dark-muted mb-4">{subtitle}</span>}
       {linkTitle && link && (
-        <Link className="text-sm text-accent mb-4" href={link}>
+        <Link className="text-[13px]/[1] text-accent" href={link}>
           {linkTitle}
         </Link>
       )}

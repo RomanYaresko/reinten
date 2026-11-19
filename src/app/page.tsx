@@ -25,26 +25,28 @@ export default async function MainPage() {
     <>
       <Section className="min-h-[calc(100vh-85px)]">
         <div className="w-full flex flex-col items-start justify-center gap-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-light-primary">
+          <h1 className="text-[36px]/[1] md:text-[56px]/[1] font-bold text-light-primary">
             Custom Software. Reliable Infrastructure. One Expert Team.
           </h1>
-          <p className="text-base md:text-lg max-w-3xl text-light-secondary">
+          <p className="text-[19px]/[1.55] max-w-[62ch] text-light-tertiary">
             We build custom software, manage the infrastructure behind it, and keep everything
             running. One team, direct communication, no handoffs.
           </p>
           <BookingButton />
-          <div className="w-full border-b border-dark-secondary mx-4" />
+          <div className="w-full border-b border-dark-subtle mx-4" />
           <Marquee images={selectedProjectsImages} />
         </div>
       </Section>
 
       <Section mode="accent">
         <div className="w-full flex flex-col items-start justify-center gap-12">
-          <h2 className="text-4xl font-bold text-light-primary">What we offer.</h2>
+          <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
+            What we offer.
+          </h2>
           <Table items={offers} />
-          <div className="text-lg">
+          <div className="text-[17px]/[1]">
             <b className="text-light-primary">Or both</b>
-            <span className="text-light-secondary">
+            <span className="text-light-tertiary">
               {' '}
               — one team writes it, ships it and keeps it running. No handoffs.
             </span>
@@ -54,7 +56,9 @@ export default async function MainPage() {
 
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
-          <h2 className="text-4xl font-bold text-light-primary">The stack we actually work in.</h2>
+          <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
+            The stack we actually work in.
+          </h2>
           <div className="grid w-full grid-cols-1 gap-12 md:grid-cols-3">
             {stacks.map((stack) => (
               <TextBlocks key={stack.id} title={stack.title} list={stack.technologies} />
@@ -65,7 +69,7 @@ export default async function MainPage() {
 
       <Section mode="white">
         <div className="w-full flex flex-col items-start justify-center gap-12">
-          <h2 className="text-4xl font-bold text-dark-primary">
+          <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-dark-primary">
             The people you&apos;ll actually work with.
           </h2>
           <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(256px,1fr))] gap-12">
@@ -85,7 +89,9 @@ export default async function MainPage() {
 
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
-          <h2 className="text-4xl font-bold text-light-primary">Start small. Decide with facts.</h2>
+          <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
+            Start small. Decide with facts.
+          </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StepBlock
               tag="01"
@@ -112,7 +118,7 @@ export default async function MainPage() {
               subtitle="Ongoing"
             />
           </div>
-          <div className="w-full border-b border-dark-secondary" />
+          <div className="w-full border-b border-dark-subtle" />
           <div className="w-full flex items-center justify-center">
             <BookingButton />
           </div>
@@ -121,7 +127,9 @@ export default async function MainPage() {
 
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
-          <h2 className="text-4xl font-bold text-light-primary">Selected work.</h2>
+          <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
+            Selected work.
+          </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
@@ -132,7 +140,9 @@ export default async function MainPage() {
 
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
-          <h2 className="text-4xl font-bold text-light-primary">Before you book.</h2>
+          <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
+            Before you book.
+          </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
             <ObjectionBlock
               title="How much does it cost?"
@@ -147,7 +157,7 @@ export default async function MainPage() {
               description="Everything we build is automated and documented — nothing lives in one person's head. And we're upfront about limits: we don't sell 24/7 on-call."
             />
           </div>
-          <div className="w-full mt-8 mb-6 border-b border-dark-secondary" />
+          <div className="w-full mt-12 mb-4 border-b border-dark-subtle" />
           <div className="w-full flex items-center justify-center">
             <BookingButton />
           </div>

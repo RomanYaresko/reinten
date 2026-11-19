@@ -11,29 +11,31 @@ type TableProps = Readonly<{
 
 export default function Table({ items }: TableProps) {
   return (
-    <div className="w-full border border-dark-secondary bg-dark-primary">
+    <div className="w-full border border-dark-subtle bg-dark-primary">
       <div className={`grid grid-cols-1 md:grid-cols-${items.length}`}>
         {items.map((item, itemIndex) => (
           <div
             key={item.id}
             className={
-              itemIndex < items.length - 1 ? 'border-0 md:border-r border-dark-secondary' : ''
+              itemIndex < items.length - 1 ? 'border-0 md:border-r border-dark-subtle' : ''
             }
           >
-            <div className="py-8 px-12 border-b border-dark-secondary bg-dark-secondary/20">
-              <h2 className="mb-2 text-2xl font-bold text-light-primary">{item.title}</h2>
-              <p className="text-sm text-light-secondary">{item.description}</p>
+            <div className="flex flex-col gap-2 py-8 px-12 border-b border-dark-subtle bg-dark-tertiary">
+              <h2 className="mb-2 text-[26px]/[1] font-bold text-light-primary">{item.title}</h2>
+              <p className="text-[15px]/[1] text-light-tertiary">{item.description}</p>
             </div>
             {item.children.map((itemChild, itemChildIndex) => (
               <div
                 key={itemChild.id}
                 className={[
-                  'py-8 px-12',
-                  itemChildIndex < item.children.length - 1 ? 'border-b border-dark-secondary' : '',
+                  'flex flex-col gap-2 py-8 px-12',
+                  itemChildIndex < item.children.length - 1 ? 'border-b border-dark-subtle' : '',
                 ].join(' ')}
               >
-                <h2 className="mb-2 text-base font-bold text-light-primary">{itemChild.title}</h2>
-                <p className="text-sm text-light-secondary">{itemChild.description}</p>
+                <h2 className="mb-2 text-[17px]/[1] font-bold text-light-primary">
+                  {itemChild.title}
+                </h2>
+                <p className="text-[15px]/[1] text-light-tertiary">{itemChild.description}</p>
               </div>
             ))}
           </div>

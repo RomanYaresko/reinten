@@ -10,7 +10,7 @@ export default function BulletPoints({ bulletPoints }: BulletPointsProps) {
           <span aria-hidden="true" className="pt-0.5 text-accent">
             —
           </span>
-          <span className="text-base text-light-secondary">{bulletPoint}</span>
+          <span className="text-[17px]/[1.55] text-light-tertiary">{bulletPoint}</span>
         </li>
       ))}
     </ul>

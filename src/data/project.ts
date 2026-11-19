@@ -7,7 +7,7 @@ export const projects: Project[] = [
     subtitle: 'Bookings and the client base lived in scattered notes — nothing was automated.',
     description:
       'Built a CRM with online booking and a sales website in 3 months. Running without failures since March 2026.',
-    image: '/data/project/salon-wide.webp',
+    image: '/data/project/salon-home.webp',
     projectDetailsSlug: 'beauty-salon',
   },
   {
@@ -64,7 +64,7 @@ export const projectDetails: ProjectDetails[] = [
       images: [
         {
           src: '/data/project/salon-square.webp',
-          title: 'string',
+          title: 'Online Shop',
           ratio: {
             x: 1,
             y: 1,
@@ -72,7 +72,7 @@ export const projectDetails: ProjectDetails[] = [
         },
         {
           src: '/data/project/salon-phone.webp',
-          title: 'string',
+          title: 'Website',
           ratio: {
             x: 9,
             y: 16,
@@ -80,7 +80,7 @@ export const projectDetails: ProjectDetails[] = [
         },
         {
           src: '/data/project/salon-wide.webp',
-          title: 'string',
+          title: 'CRM',
           ratio: {
             x: 16,
             y: 9,

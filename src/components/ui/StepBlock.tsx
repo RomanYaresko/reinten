@@ -2,14 +2,14 @@ const modeClasses = {
   accent: {
     tag: 'text-accent',
     title: 'text-light-primary',
-    description: 'text-light-secondary',
-    subtitle: 'text-light-secondary/80',
+    description: 'text-light-tertiary',
+    subtitle: 'text-light-muted',
   },
   white: {
-    tag: 'text-dark-secondary',
+    tag: 'text-light-muted',
     title: 'text-dark-primary',
-    description: 'text-dark-secondary',
-    subtitle: 'text-dark-secondary/80',
+    description: 'text-dark-muted',
+    subtitle: 'text-dark-muted',
   },
 };
 
@@ -32,10 +32,14 @@ export default function StepBlock({
 
   return (
     <article className="flex flex-col">
-      {tag && <span className={`font-code text-xs text-code ${colors.tag}`}>{tag}</span>}
-      {title && <h3 className={`mb-4 text-lg font-bold ${colors.title}`}>{title}</h3>}
-      {description && <p className={`mb-6 text-base ${colors.description}`}>{description}</p>}
-      {subtitle && <p className={`font-code text-xs ${colors.subtitle}`}>{subtitle}</p>}
+      {tag && (
+        <span className={`font-code text-[11.5px]/[1] tracking-[0.18em] ${colors.tag}`}>{tag}</span>
+      )}
+      {title && <h3 className={`mb-4 text-[19px]/[1] font-bold ${colors.title}`}>{title}</h3>}
+      {description && (
+        <p className={`mb-6 text-[15px]/[1.55] ${colors.description}`}>{description}</p>
+      )}
+      {subtitle && <p className={`font-code text-[11.5px]/[1] ${colors.subtitle}`}>{subtitle}</p>}
     </article>
   );
 }

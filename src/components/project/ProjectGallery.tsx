@@ -47,11 +47,11 @@ export default function ProjectGallery({ images, maxRowRatio = 3 }: ProjectGalle
   const rows = groupImages(images, maxRowRatio);
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-16">
       {rows.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className="grid grid-cols-1 gap-4 md:grid-cols-(--columns)"
+          className="grid grid-cols-1 gap-8 md:grid-cols-(--columns)"
           style={
             {
               '--columns': row.map((image) => `${getAspectRatio(image)}fr`).join(' '),
@@ -60,10 +60,10 @@ export default function ProjectGallery({ images, maxRowRatio = 3 }: ProjectGalle
         >
           {row.map((image) => (
             <figure key={image.src} className="min-w-0">
-              <div className="w-full border border-light-line rounded-sm overflow-x-hidden bg-white">
-                <div className="flex gap-1.5 px-3 py-2.5 border-b border-light-line">
+              <div className="w-full border border-light-secondary rounded-sm overflow-x-hidden bg-white">
+                <div className="flex gap-1.5 px-3 py-2.5 border-b border-light-secondary">
                   {[...Array(3)].map((_, index) => (
-                    <i key={index} className="block w-2 h-2 rounded-full bg-light-line" />
+                    <i key={index} className="block w-2 h-2 rounded-full bg-light-secondary" />
                   ))}
                 </div>
                 <Image
@@ -76,7 +76,7 @@ export default function ProjectGallery({ images, maxRowRatio = 3 }: ProjectGalle
                   unoptimized
                 />
               </div>
-              <figcaption className="mt-4 text-code text-dark-dimmed uppercase tracking-[0.18em] text-xs">
+              <figcaption className="mt-4 text-code text-light-muted uppercase tracking-[0.18em] text-[11.5px]/[1]">
                 {image.title}
               </figcaption>
             </figure>
