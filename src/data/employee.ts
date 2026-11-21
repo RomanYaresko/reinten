@@ -29,4 +29,13 @@ export const employees: Employee[] = [
     linkedInLink: 'https://www.linkedin.com/in/serhii-kolodiazhnyi-22525a25b/',
     isFounder: false,
   },
+  {
+    id: 4,
+    image: assetPath('/data/employee/maria-yastriebova.jpg'),
+    firstName: 'Maria',
+    lastName: 'Yastriebova',
+    description: 'Product Designer',
+    linkedInLink: 'https://www.linkedin.com/in/mariia-yastriebova-524392241/',
+    isFounder: false,
+  },
 ];
