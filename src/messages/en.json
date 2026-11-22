@@ -1,0 +1,84 @@
+{
+  "Header": {
+    "brand": "REINTEN TECH",
+    "allWork": "← All work"
+  },
+  "Footer": {
+    "copyright": "© {year} Reinten Tech"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Custom Software. Reliable Infrastructure. One Expert Team.",
+      "description": "We build custom software, manage the infrastructure behind it, and keep everything running. One team, direct communication, no handoffs."
+    },
+    "offers": {
+      "title": "What we offer.",
+      "bothLabel": "Or both",
+      "bothDescription": "— one team writes it, ships it and keeps it running. No handoffs."
+    },
+    "stack": {
+      "title": "The stack we actually work in."
+    },
+    "team": {
+      "title": "The people you'll actually work with.",
+      "profileLink": "LinkedIn →"
+    },
+    "process": {
+      "title": "Start small. Decide with facts.",
+      "call": {
+        "title": "Call",
+        "description": "30 minutes with the founder about what you need.",
+        "subtitle": "30 minutes"
+      },
+      "scope": {
+        "title": "Scope / Audit",
+        "description": "We map what to build — or what's at risk. Fixed price, agreed upfront.",
+        "subtitle": "1–4 weeks"
+      },
+      "build": {
+        "title": "Build / Fix",
+        "description": "Working results every two weeks, not a reveal at the end.",
+        "subtitle": "Depends on scope"
+      },
+      "support": {
+        "title": "Support",
+        "description": "We stay on monthly — or hand everything over, documented.",
+        "subtitle": "Ongoing"
+      }
+    },
+    "projects": {
+      "title": "Selected work."
+    },
+    "objections": {
+      "title": "Before you book.",
+      "cost": {
+        "title": "How much does it cost?",
+        "description": "Projects and audits are fixed price, agreed before we start. Ongoing work is billed monthly. No surprises on the invoice."
+      },
+      "developer": {
+        "title": "We already have a developer doing this.",
+        "description": "That's usually how it starts — until they're stuck between shipping features and fixing fires. We take infrastructure off their plate and leave it documented, so they're never the only one who knows how it works."
+      },
+      "availability": {
+        "title": "You're a small team. What if someone's out?",
+        "description": "Everything we build is automated and documented — nothing lives in one person's head. And we're upfront about limits: we don't sell 24/7 on-call."
+      }
+    }
+  },
+  "BookingButton": {
+    "label": "Book a 30-min call"
+  },
+  "ImageBlock": {
+    "defaultAlt": "Image"
+  },
+  "Marquee": {
+    "itemAlt": "Selected project"
+  },
+  "ProjectCard": {
+    "imageAlt": "{title} project image",
+    "readCase": "Read case →"
+  },
+  "ProjectPage": {
+    "contactHeading": "No system yet? Let's talk."
+  }
+}

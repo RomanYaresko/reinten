@@ -1,19 +1,22 @@
 import Image from 'next/image';
 import { Project } from '@/features/project/project.types';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
+import { getTranslations } from 'next-intl/server';
 
 type ProjectCardProps = Readonly<{
   project: Project;
 }>;
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default async function ProjectCard({ project }: ProjectCardProps) {
+  const t = await getTranslations('ProjectCard');
+
   return (
     <article className="h-full border border-dark-subtle bg-dark-primary">
       <div className="relative aspect-video w-full border-b border-dark-subtle bg-dark-tertiary">
         {project.image && (
           <Image
             src={project.image}
-            alt={`${project.title} project image`}
+            alt={t('imageAlt', { title: project.title })}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
@@ -36,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={`/project/${project.projectDetailsSlug}`}
             className="text-accent text-[14px]/[1]"
           >
-            Read case →
+            {t('readCase')}
           </Link>
         )}
       </div>

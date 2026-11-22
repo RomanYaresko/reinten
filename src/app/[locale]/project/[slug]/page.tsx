@@ -8,32 +8,48 @@ import QuoteBlock from '@/components/ui/QuoteBlock';
 import EmployeeBlock from '@/components/employee/EmployeeBlock';
 import BookingButton from '@/components/booking/BookingButton';
 import { getFounder } from '@/features/employee/employee.service';
+import { getTranslations } from 'next-intl/server';
+import type { Locale } from '@/i18n/routing';
+import { hasLocale } from 'next-intl';
+import { routing } from '@/i18n/routing';
 
-export async function generateStaticParams() {
-  const projects = await getProjects();
+export async function generateStaticParams({
+  params,
+}: {
+  params: {
+    locale: string;
+  };
+}) {
+  if (!hasLocale(routing.locales, params.locale)) {
+    throw new Error(`Unsupported locale "${params.locale}" while generating project routes.`);
+  }
 
-  return projects
-    .filter((project) => project.projectDetailsSlug)
-    .map((project) => ({
-      slug: project.projectDetailsSlug,
-    }));
+  const projects = await getProjects(params.locale);
+
+  return projects.flatMap((project) =>
+    project.projectDetailsSlug ? [{ slug: project.projectDetailsSlug }] : [],
+  );
 }
 
 interface ProjectPageProps {
   params: Promise<{
+    locale: Locale;
     slug: string;
   }>;
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = await params;
-  const projectDetails = await getProjectDetailsBySlug(slug);
+  const { locale, slug } = await params;
+  const [projectDetails, founder] = await Promise.all([
+    getProjectDetailsBySlug(slug, locale),
+    getFounder(locale),
+  ]);
 
   if (!projectDetails) {
     notFound();
   }
 
-  const founder = await getFounder();
+  const t = await getTranslations('ProjectPage');
   const { heroSection, secondarySection, showcaseSection, additionalSection, resultsSection } =
     projectDetails;
 
@@ -145,7 +161,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <Section>
         <div className="flex w-full flex-col items-center gap-12 text-center">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
-            No system yet? Let&apos;s talk.
+            {t('contactHeading')}
           </h2>
           <BookingButton />
           {founder && <EmployeeBlock employee={founder} />}

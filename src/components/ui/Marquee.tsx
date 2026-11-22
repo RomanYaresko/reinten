@@ -1,10 +1,13 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
 type MarqueeProps = Readonly<{
   images: string[];
 }>;
 
-export default function Marquee({ images }: MarqueeProps) {
+export default async function Marquee({ images }: MarqueeProps) {
+  const t = await getTranslations('Marquee');
+
   return (
     <div className="relative h-40 w-full overflow-hidden">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-dark-primary to-transparent" />
@@ -16,7 +19,7 @@ export default function Marquee({ images }: MarqueeProps) {
           <div key={index} className="flex h-full shrink-0 items-center px-3">
             <Image
               src={image}
-              alt="Marquee item"
+              alt={t('itemAlt')}
               width={1000}
               height={600}
               className="h-auto max-h-40 w-auto max-w-none rounded border border-dark-subtle"

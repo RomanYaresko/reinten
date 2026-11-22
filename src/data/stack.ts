@@ -1,4 +1,4 @@
-import { Stack } from '@/features/stack/stack.types';
+import type { Stack } from '@/features/stack/stack.types';
 
 export const stacks: Stack[] = [
   {

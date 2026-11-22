@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
 type ImageBlockProps = Readonly<{
   src: string;
@@ -9,13 +10,21 @@ type ImageBlockProps = Readonly<{
   link?: string;
 }>;
 
-export default function ImageBlock({ src, title, subtitle, linkTitle, link }: ImageBlockProps) {
+export default async function ImageBlock({
+  src,
+  title,
+  subtitle,
+  linkTitle,
+  link,
+}: ImageBlockProps) {
+  const t = await getTranslations('ImageBlock');
+
   return (
     <div className="flex flex-1 min-w-0 flex-col">
       <div className="relative aspect-square w-full overflow-hidden mb-6">
         <Image
           src={src}
-          alt={title ? `Image of ${title}` : 'Image'}
+          alt={title ?? t('defaultAlt')}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"

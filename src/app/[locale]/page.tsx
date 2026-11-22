@@ -12,25 +12,35 @@ import { getEmployees, getFounder } from '@/features/employee/employee.service';
 import { getOffers } from '@/features/offer/offer.service';
 import { getProjects, getSelectedProjectsImages } from '@/features/project/project.service';
 import { getStacks } from '@/features/stack/stack.service';
+import { getTranslations } from 'next-intl/server';
+import type { Locale } from '@/i18n/routing';
 
-export default async function MainPage() {
-  const offers = await getOffers();
-  const employees = await getEmployees();
-  const stacks = await getStacks();
-  const projects = await getProjects();
-  const selectedProjectsImages = await getSelectedProjectsImages();
-  const founder = await getFounder();
+type MainPageProps = Readonly<{
+  params: Promise<{
+    locale: Locale;
+  }>;
+}>;
+
+export default async function MainPage({ params }: MainPageProps) {
+  const [{ locale }, t] = await Promise.all([params, getTranslations('HomePage')]);
+  const [offers, employees, stacks, projects, selectedProjectsImages, founder] = await Promise.all([
+    getOffers(locale),
+    getEmployees(locale),
+    getStacks(),
+    getProjects(locale),
+    getSelectedProjectsImages(),
+    getFounder(locale),
+  ]);
 
   return (
     <>
       <Section className="min-h-[calc(100vh-85px)]">
         <div className="w-full flex flex-col items-start justify-center gap-8">
           <h1 className="text-[36px]/[1] md:text-[56px]/[1] font-bold text-light-primary">
-            Custom Software. Reliable Infrastructure. One Expert Team.
+            {t('hero.title')}
           </h1>
           <p className="text-[19px]/[1.55] max-w-[62ch] text-light-tertiary">
-            We build custom software, manage the infrastructure behind it, and keep everything
-            running. One team, direct communication, no handoffs.
+            {t('hero.description')}
           </p>
           <BookingButton />
           <div className="w-full border-b border-dark-subtle mx-4" />
@@ -41,15 +51,12 @@ export default async function MainPage() {
       <Section mode="accent">
         <div className="w-full flex flex-col items-start justify-center gap-12">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
-            What we offer.
+            {t('offers.title')}
           </h2>
           <Table items={offers} />
           <div className="text-[17px]/[1]">
-            <b className="text-light-primary">Or both</b>
-            <span className="text-light-tertiary">
-              {' '}
-              — one team writes it, ships it and keeps it running. No handoffs.
-            </span>
+            <b className="text-light-primary">{t('offers.bothLabel')}</b>
+            <span className="text-light-tertiary"> {t('offers.bothDescription')}</span>
           </div>
         </div>
       </Section>
@@ -57,7 +64,7 @@ export default async function MainPage() {
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
-            The stack we actually work in.
+            {t('stack.title')}
           </h2>
           <div className="grid w-full grid-cols-1 gap-12 md:grid-cols-3">
             {stacks.map((stack) => (
@@ -70,7 +77,7 @@ export default async function MainPage() {
       <Section mode="white">
         <div className="w-full flex flex-col items-start justify-center gap-12">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-dark-primary">
-            The people you&apos;ll actually work with.
+            {t('team.title')}
           </h2>
           <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(256px,1fr))] gap-12">
             {employees.map((employee) => (
@@ -79,7 +86,7 @@ export default async function MainPage() {
                 src={employee.image}
                 title={`${employee.firstName} ${employee.lastName}`}
                 subtitle={employee.description}
-                linkTitle="LinkedIn →"
+                linkTitle={t('team.profileLink')}
                 link={employee.linkedInLink}
               />
             ))}
@@ -90,32 +97,32 @@ export default async function MainPage() {
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
-            Start small. Decide with facts.
+            {t('process.title')}
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <StepBlock
               tag="01"
-              title="Call"
-              description="30 minutes with the founder about what you need."
-              subtitle="30 minutes"
+              title={t('process.call.title')}
+              description={t('process.call.description')}
+              subtitle={t('process.call.subtitle')}
             />
             <StepBlock
               tag="02"
-              title="Scope / Audit"
-              description="We map what to build — or what's at risk. Fixed price, agreed upfront."
-              subtitle="1–4 weeks"
+              title={t('process.scope.title')}
+              description={t('process.scope.description')}
+              subtitle={t('process.scope.subtitle')}
             />
             <StepBlock
               tag="03"
-              title="Build / Fix"
-              description="Working results every two weeks, not a reveal at the end."
-              subtitle="Depends on scope"
+              title={t('process.build.title')}
+              description={t('process.build.description')}
+              subtitle={t('process.build.subtitle')}
             />
             <StepBlock
               tag="04"
-              title="Support"
-              description="We stay on monthly — or hand everything over, documented."
-              subtitle="Ongoing"
+              title={t('process.support.title')}
+              description={t('process.support.description')}
+              subtitle={t('process.support.subtitle')}
             />
           </div>
           <div className="w-full border-b border-dark-subtle" />
@@ -128,7 +135,7 @@ export default async function MainPage() {
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
-            Selected work.
+            {t('projects.title')}
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12">
             {projects.map((project) => (
@@ -141,20 +148,20 @@ export default async function MainPage() {
       <Section>
         <div className="w-full flex flex-col items-start justify-center gap-12">
           <h2 className="text-[26px]/[1] md:text-[34px]/[1] font-bold text-light-primary">
-            Before you book.
+            {t('objections.title')}
           </h2>
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-12">
             <ObjectionBlock
-              title="How much does it cost?"
-              description="Projects and audits are fixed price, agreed before we start. Ongoing work is billed monthly. No surprises on the invoice."
+              title={t('objections.cost.title')}
+              description={t('objections.cost.description')}
             />
             <ObjectionBlock
-              title="We already have a developer doing this."
-              description="That's usually how it starts — until they're stuck between shipping features and fixing fires. We take infrastructure off their plate and leave it documented, so they're never the only one who knows how it works."
+              title={t('objections.developer.title')}
+              description={t('objections.developer.description')}
             />
             <ObjectionBlock
-              title="You're a small team. What if someone's out?"
-              description="Everything we build is automated and documented — nothing lives in one person's head. And we're upfront about limits: we don't sell 24/7 on-call."
+              title={t('objections.availability.title')}
+              description={t('objections.availability.description')}
             />
           </div>
           <div className="w-full mt-12 mb-4 border-b border-dark-subtle" />

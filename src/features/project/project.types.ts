@@ -1,50 +1,60 @@
-import { ProjectGalleryImage } from '@/components/project/ProjectGallery';
+import type { DataLocaleString } from '@/features/data/data.types';
 
-export interface ProjectDetails {
+export interface ProjectDetails<Text = string> {
   slug: string;
   heroSection?: {
-    title: string;
-    subtitle: string;
+    title: Text;
+    subtitle: Text;
     cases: {
-      title: string;
-      description: string;
+      title: Text;
+      description: Text;
     }[];
   };
   secondarySection?: {
-    title: string;
-    bulletPoints: string[];
+    title: Text;
+    bulletPoints: Text[];
   };
   showcaseSection?: {
-    title: string;
+    title: Text;
     steps?: {
-      title: string;
-      description: string;
+      title: Text;
+      description: Text;
     }[];
-    images: ProjectGalleryImage[];
+    images: {
+      src: string;
+      title: Text;
+      ratio: {
+        x: number;
+        y: number;
+      };
+    }[];
   };
   additionalSection?: {
-    title: string;
-    description: string;
-    bulletPoints: string[];
+    title: Text;
+    description: Text;
+    bulletPoints: Text[];
   };
   resultsSection?: {
-    title: string;
+    title: Text;
     metrics: {
-      value: string;
-      description: string;
+      value: Text;
+      description: Text;
     }[];
     feedback: {
-      quote: string;
-      author: string;
+      quote: Text;
+      author: Text;
     };
   };
 }
 
-export interface Project {
+export interface Project<Text = string> {
   id: number;
-  title: string;
-  subtitle: string;
-  description: string;
+  title: Text;
+  subtitle: Text;
+  description: Text;
   image?: string;
   projectDetailsSlug?: string;
 }
+
+export type ProjectData = Project<DataLocaleString>;
+export type ProjectDetailsData = ProjectDetails<DataLocaleString>;

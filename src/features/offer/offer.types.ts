@@ -1,3 +1,10 @@
-import { TableItem } from '@/components/ui/Table';
+import type { DataLocaleString } from '@/features/data/data.types';
 
-export type Offer = TableItem;
+export interface Offer<Text = string> {
+  id: number;
+  title: Text;
+  description: Text;
+  children: Offer<Text>[];
+}
+
+export type OfferData = Offer<DataLocaleString>;

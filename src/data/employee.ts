@@ -1,13 +1,13 @@
-import { Employee } from '@/features/employee/employee.types';
+import { EmployeeData } from '@/features/employee/employee.types';
 import { assetPath } from '@/lib/paths';
 
-export const employees: Employee[] = [
+export const employees: EmployeeData[] = [
   {
     id: 1,
     image: assetPath('/data/employee/vitaliy-prymak.jpg'),
     firstName: 'Vitaliy',
     lastName: 'Prymak',
-    description: 'Founder, DevOps engineer',
+    description: { en: 'Founder, DevOps engineer', pl: 'Założyciel, inżynier DevOps' },
     linkedInLink: 'https://www.linkedin.com/in/vitaliy-prymak-672540226/',
     isFounder: true,
   },
@@ -16,7 +16,7 @@ export const employees: Employee[] = [
     image: assetPath('/data/employee/mykyta-diadiunov.jpg'),
     firstName: 'Mykyta',
     lastName: 'Diadiunov',
-    description: 'Engineer',
+    description: { en: 'Engineer', pl: 'Inżynier' },
     linkedInLink: 'https://www.linkedin.com/in/mykyta-diadiunov-633ab125b/',
     isFounder: false,
   },
@@ -25,7 +25,7 @@ export const employees: Employee[] = [
     image: assetPath('/data/employee/serhii-kolodiazhnyi.jpg'),
     firstName: 'Serhii',
     lastName: 'Kolodiazhnyi',
-    description: 'Engineer',
+    description: { en: 'Engineer', pl: 'Inżynier' },
     linkedInLink: 'https://www.linkedin.com/in/serhii-kolodiazhnyi-22525a25b/',
     isFounder: false,
   },
@@ -34,7 +34,7 @@ export const employees: Employee[] = [
     image: assetPath('/data/employee/maria-yastriebova.jpg'),
     firstName: 'Maria',
     lastName: 'Yastriebova',
-    description: 'Product Designer',
+    description: { en: 'Product Designer', pl: 'Projektant produktu' },
     linkedInLink: 'https://www.linkedin.com/in/mariia-yastriebova-524392241/',
     isFounder: false,
   },
@@ -43,7 +43,7 @@ export const employees: Employee[] = [
     image: assetPath('/data/employee/pavel-moroz.png'),
     firstName: 'Pavel',
     lastName: 'Moroz',
-    description: 'SEO specialist',
+    description: { en: 'SEO specialist', pl: 'Specjalista SEO' },
     linkedInLink: 'https://www.linkedin.com/in/pavel-moroz-3865701a4/',
     isFounder: false,
   },

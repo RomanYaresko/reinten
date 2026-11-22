@@ -1,13 +1,13 @@
 import type { NextConfig } from 'next';
-
-const isProd = process.env.NODE_ENV === 'production';
+import createNextIntlPlugin from 'next-intl/plugin';
+import { BASE_PATH } from './src/lib/paths';
 
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
 
-  ...(isProd && {
-    basePath: '/reinten',
+  ...(BASE_PATH && {
+    basePath: BASE_PATH,
   }),
 
   turbopack: {
@@ -20,4 +20,6 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+export default withNextIntl(nextConfig);

@@ -1,0 +1,84 @@
+{
+  "Header": {
+    "brand": "REINTEN TECH",
+    "allWork": "← Wszystkie realizacje"
+  },
+  "Footer": {
+    "copyright": "© {year} Reinten Tech"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Dedykowane oprogramowanie. Niezawodna infrastruktura. Jeden zespół ekspertów.",
+      "description": "Tworzymy dedykowane oprogramowanie, zarządzamy infrastrukturą i dbamy o nieprzerwane działanie systemów. Jeden zespół, bezpośredni kontakt i bez przekazywania pracy."
+    },
+    "offers": {
+      "title": "Co oferujemy.",
+      "bothLabel": "Albo jedno i drugie",
+      "bothDescription": "— jeden zespół tworzy, wdraża i utrzymuje. Bez przekazywania pracy."
+    },
+    "stack": {
+      "title": "Technologie, z których naprawdę korzystamy."
+    },
+    "team": {
+      "title": "Poznaj osoby, z którymi będziesz współpracować.",
+      "profileLink": "LinkedIn →"
+    },
+    "process": {
+      "title": "Zacznijmy od małego kroku. Decyzje podejmuj na podstawie faktów.",
+      "call": {
+        "title": "Rozmowa",
+        "description": "30 minut rozmowy z założycielem o Twoich potrzebach.",
+        "subtitle": "30 minut"
+      },
+      "scope": {
+        "title": "Zakres / audyt",
+        "description": "Ustalamy, co zbudować lub co wymaga zabezpieczenia. Stała cena ustalona z góry.",
+        "subtitle": "1–4 tygodnie"
+      },
+      "build": {
+        "title": "Budowa / naprawa",
+        "description": "Działające rezultaty co dwa tygodnie, bez niespodzianki na sam koniec.",
+        "subtitle": "Zależnie od zakresu"
+      },
+      "support": {
+        "title": "Wsparcie",
+        "description": "Możemy kontynuować współpracę co miesiąc lub przekazać wszystko wraz z dokumentacją.",
+        "subtitle": "Stałe"
+      }
+    },
+    "projects": {
+      "title": "Wybrane realizacje."
+    },
+    "objections": {
+      "title": "Zanim umówisz rozmowę.",
+      "cost": {
+        "title": "Ile to kosztuje?",
+        "description": "Projekty i audyty mają stałą cenę ustaloną przed rozpoczęciem. Bieżące prace rozliczamy co miesiąc. Bez niespodzianek na fakturze."
+      },
+      "developer": {
+        "title": "Mamy już programistę, który się tym zajmuje.",
+        "description": "Często tak się zaczyna — dopóki jedna osoba nie musi jednocześnie rozwijać produktu i gasić pożarów. Przejmujemy infrastrukturę i dokumentujemy ją, żeby wiedza o systemie nie zależała od jednej osoby."
+      },
+      "availability": {
+        "title": "Jesteście małym zespołem. Co jeśli kogoś zabraknie?",
+        "description": "Automatyzujemy i dokumentujemy wszystko, co tworzymy — nic nie zależy od wiedzy jednej osoby. Otwarcie mówimy też o ograniczeniach: nie oferujemy całodobowego dyżuru."
+      }
+    }
+  },
+  "BookingButton": {
+    "label": "Umów 30-minutową rozmowę"
+  },
+  "ImageBlock": {
+    "defaultAlt": "Obraz"
+  },
+  "Marquee": {
+    "itemAlt": "Wybrany projekt"
+  },
+  "ProjectCard": {
+    "imageAlt": "Projekt: {title}",
+    "readCase": "Zobacz realizację →"
+  },
+  "ProjectPage": {
+    "contactHeading": "Nie masz jeszcze systemu? Porozmawiajmy."
+  }
+}
