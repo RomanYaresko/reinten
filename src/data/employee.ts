@@ -38,4 +38,13 @@ export const employees: Employee[] = [
     linkedInLink: 'https://www.linkedin.com/in/mariia-yastriebova-524392241/',
     isFounder: false,
   },
+  {
+    id: 5,
+    image: assetPath('/data/employee/pavel-moroz.png'),
+    firstName: 'Pavel',
+    lastName: 'Moroz',
+    description: 'SEO specialist',
+    linkedInLink: 'https://www.linkedin.com/in/pavel-moroz-3865701a4/',
+    isFounder: false,
+  },
 ];
