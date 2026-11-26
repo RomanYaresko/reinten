@@ -90,6 +90,7 @@
     "contactHint": "Podaj adres e-mail lub numer telefonu (wystarczy jedna z tych informacji).",
     "message": "Wiadomość",
     "submit": "Wyślij wiadomość",
+    "emailSubject": "Nowa wiadomość ze strony internetowej",
     "sending": "Wysyłanie…",
     "success": "Dziękujemy! Wiadomość została wysłana.",
     "failure": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",

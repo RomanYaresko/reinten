@@ -90,6 +90,7 @@
     "contactHint": "Please provide at least an email address or phone number.",
     "message": "Message",
     "submit": "Send message",
+    "emailSubject": "New message from the website",
     "sending": "Sending…",
     "success": "Thanks! Your message has been sent.",
     "failure": "We couldn't send your message. Please try again.",

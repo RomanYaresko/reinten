@@ -4,7 +4,6 @@ import { useMemo, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
-import { send } from '@emailjs/browser';
 import { createContactFormSchema, type ContactFormValues } from '@/features/contact/contact.schema';
 import InputField from '@/components/fields/InputField';
 import DoneIcon from '@/assets/icons/done.svg';
@@ -41,30 +40,55 @@ export default function ContactForm() {
   const [status, setStatus] = useState<SubmissionStatus>('idle');
 
   async function submitForm(values: ContactFormValues) {
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID?.trim();
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID?.trim();
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY?.trim();
+    const recipientEmail = process.env.NEXT_PUBLIC_FORMSUBMIT_EMAIL?.trim();
 
-    if (!serviceId || !templateId || !publicKey) {
+    if (!recipientEmail) {
       setStatus('not-configured');
       return;
     }
 
     try {
-      await send(
-        serviceId,
-        templateId,
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(recipientEmail)}`,
         {
-          fullname: values.fullName,
-          email: values.email,
-          phone: values.phone,
-          message: values.message,
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: values.fullName,
+            email: values.email,
+            phone: values.phone,
+            message: values.message,
+            _subject: t('emailSubject'),
+            _template: 'table',
+            ...(values.email ? { _replyto: values.email } : {}),
+          }),
         },
-        { publicKey },
       );
+      const result: unknown = await response.json();
+      const succeeded =
+        typeof result === 'object' &&
+        result !== null &&
+        'success' in result &&
+        (result.success === true || result.success === 'true');
+
+      if (!response.ok || !succeeded) {
+        const message =
+          typeof result === 'object' &&
+          result !== null &&
+          'message' in result &&
+          typeof result.message === 'string'
+            ? result.message
+            : `FormSubmit returned HTTP ${response.status}.`;
+        throw new Error(message);
+      }
+
       setStatus('sent');
       reset();
-    } catch {
+    } catch (error) {
+      console.error('FormSubmit contact form submission failed:', error);
       setStatus('failed');
     }
   }
