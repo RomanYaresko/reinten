@@ -1,4 +1,4 @@
-import BookingButton from '@/components/booking/BookingButton';
+import BookingButton from '@/components/contact/ContactButton';
 import EmployeeBlock from '@/components/employee/EmployeeBlock';
 import ProjectCard from '@/components/project/ProjectCard';
 import ImageBlock from '@/components/ui/ImageBlock';

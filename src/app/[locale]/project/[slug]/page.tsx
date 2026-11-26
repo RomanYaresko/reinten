@@ -6,7 +6,7 @@ import ProjectGallery from '@/components/project/ProjectGallery';
 import BulletPoints from '@/components/ui/BulletPoints';
 import QuoteBlock from '@/components/ui/QuoteBlock';
 import EmployeeBlock from '@/components/employee/EmployeeBlock';
-import BookingButton from '@/components/booking/BookingButton';
+import BookingButton from '@/components/contact/ContactButton';
 import { getFounder } from '@/features/employee/employee.service';
 import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';

@@ -1,6 +1,7 @@
 'use client';
 
 import CloseIcon from '@/assets/icons/cross.svg';
+import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 type ModalProps = Readonly<{
@@ -11,6 +12,22 @@ type ModalProps = Readonly<{
 
 export default function Modal({ open, onClose, children }: ModalProps) {
   const t = useTranslations('Modal');
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const bodyOverflow = document.body.style.overflow;
+    const documentOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = bodyOverflow;
+      document.documentElement.style.overflow = documentOverflow;
+    };
+  }, [open]);
 
   return (
     <div
@@ -30,7 +47,7 @@ export default function Modal({ open, onClose, children }: ModalProps) {
         role="dialog"
         aria-modal="true"
         className={`
-          relative min-w-72 rounded-sm
+          relative max-h-[90vh] min-w-72 max-w-lg overflow-y-auto rounded-sm
           bg-dark-primary text-light-primary
           border border-dark-subtle
           px-5 pb-5 pt-10

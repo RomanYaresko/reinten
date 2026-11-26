@@ -73,7 +73,27 @@
     }
   },
   "BookingButton": {
-    "label": "Reservar una llamada de 30 min"
+    "label": "Reservar una llamada de 30 min",
+    "formTitle": "Cuéntanos sobre tu proyecto"
+  },
+  "ContactForm": {
+    "fullName": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "contactHint": "Indica un correo electrónico o un número de teléfono; basta con uno.",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "success": "¡Gracias! Tu mensaje se ha enviado.",
+    "failure": "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+    "notConfigured": "El formulario de contacto aún no está configurado. Inténtalo más tarde.",
+    "validation": {
+      "fullNameRequired": "Escribe tu nombre completo.",
+      "emailInvalid": "Introduce un correo electrónico válido.",
+      "emailOrPhoneRequired": "Indica un correo electrónico o un número de teléfono.",
+      "phoneInvalid": "Introduce un número de teléfono válido.",
+      "messageTooLong": "El mensaje no puede superar los 5000 caracteres."
+    }
   },
   "ImageBlock": {
     "defaultAlt": "Imagen"

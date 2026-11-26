@@ -73,7 +73,27 @@
     }
   },
   "BookingButton": {
-    "label": "Umów 30-minutową rozmowę"
+    "label": "Umów 30-minutową rozmowę",
+    "formTitle": "Opowiedz nam o swoim projekcie"
+  },
+  "ContactForm": {
+    "fullName": "Imię i nazwisko",
+    "email": "Adres e-mail",
+    "phone": "Numer telefonu",
+    "contactHint": "Podaj adres e-mail lub numer telefonu (wystarczy jedna z tych informacji).",
+    "message": "Wiadomość",
+    "submit": "Wyślij wiadomość",
+    "sending": "Wysyłanie…",
+    "success": "Dziękujemy! Wiadomość została wysłana.",
+    "failure": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+    "notConfigured": "Formularz kontaktowy nie jest jeszcze skonfigurowany. Spróbuj ponownie później.",
+    "validation": {
+      "fullNameRequired": "Podaj imię i nazwisko.",
+      "emailInvalid": "Podaj prawidłowy adres e-mail.",
+      "emailOrPhoneRequired": "Podaj adres e-mail lub numer telefonu.",
+      "phoneInvalid": "Podaj prawidłowy numer telefonu.",
+      "messageTooLong": "Wiadomość może mieć maksymalnie 5000 znaków."
+    }
   },
   "ImageBlock": {
     "defaultAlt": "Obraz"

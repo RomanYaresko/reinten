@@ -73,7 +73,27 @@
     }
   },
   "BookingButton": {
-    "label": "Book a 30-min call"
+    "label": "Book a 30-min call",
+    "formTitle": "Tell us about your project"
+  },
+  "ContactForm": {
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone number",
+    "contactHint": "Please provide at least an email address or phone number.",
+    "message": "Message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Thanks! Your message has been sent.",
+    "failure": "We couldn't send your message. Please try again.",
+    "notConfigured": "The contact form is not configured yet. Please try again later.",
+    "validation": {
+      "fullNameRequired": "Please enter your full name.",
+      "emailInvalid": "Enter a valid email address.",
+      "emailOrPhoneRequired": "Enter an email address or phone number.",
+      "phoneInvalid": "Enter a valid phone number.",
+      "messageTooLong": "Message must be 5,000 characters or fewer."
+    }
   },
   "ImageBlock": {
     "defaultAlt": "Image"
