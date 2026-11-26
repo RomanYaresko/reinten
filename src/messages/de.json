@@ -3,6 +3,13 @@
     "brand": "REINTEN TECH",
     "allWork": "← Alle Arbeiten"
   },
+  "Metadata": {
+    "homeTitle": "Individuelle Software & DevOps | Reinten Tech",
+    "homeDescription": "Wir entwickeln individuelle Software, betreiben zuverlässige Infrastruktur und bieten laufenden Support – mit einem Expertenteam.",
+    "projectFallbackTitle": "Projektbericht",
+    "projectFallbackDescription": "Ein Softwareprojekt von Reinten Tech.",
+    "openGraphImageAlt": "Reinten Tech – individuelle Software und DevOps"
+  },
   "Localization": {
     "buttonLabel": "Sprache wechseln",
     "title": "Sprache auswählen"

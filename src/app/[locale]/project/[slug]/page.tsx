@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getProjectDetailsBySlug, getProjects } from '@/features/project/project.service';
 import { notFound } from 'next/navigation';
 import Section from '@/components/ui/Section';
@@ -12,6 +13,15 @@ import { getTranslations } from 'next-intl/server';
 import type { Locale } from '@/i18n/routing';
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
+import StructuredData from '@/components/seo/StructuredData';
+import {
+  getLocalizedAlternates,
+  getLocalizedUrl,
+  getSiteUrl,
+  openGraphLocales,
+  OPEN_GRAPH_IMAGE_PATH,
+  SITE_NAME,
+} from '@/lib/seo';
 
 export async function generateStaticParams({
   params,
@@ -38,6 +48,55 @@ interface ProjectPageProps {
   }>;
 }
 
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const [details, t] = await Promise.all([
+    getProjectDetailsBySlug(slug, locale),
+    getTranslations({ locale, namespace: 'Metadata' }),
+  ]);
+
+  if (!details) {
+    return {};
+  }
+
+  const title = details.heroSection?.title ?? t('projectFallbackTitle');
+  const description = details.heroSection?.subtitle ?? t('projectFallbackDescription');
+  const pathname = `/project/${slug}/`;
+  const url = getLocalizedUrl(locale, pathname);
+  const image = getSiteUrl(OPEN_GRAPH_IMAGE_PATH);
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: getLocalizedAlternates(pathname),
+    },
+    openGraph: {
+      type: 'article',
+      siteName: SITE_NAME,
+      locale: openGraphLocales[locale],
+      url,
+      title,
+      description,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: t('openGraphImageAlt'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { locale, slug } = await params;
   const [projectDetails, founder] = await Promise.all([
@@ -52,9 +111,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const t = await getTranslations('ProjectPage');
   const { heroSection, secondarySection, showcaseSection, additionalSection, resultsSection } =
     projectDetails;
+  const structuredDataTitle = heroSection?.title ?? projectDetails.slug;
+  const structuredDataDescription = heroSection?.subtitle ?? projectDetails.slug;
 
   return (
     <>
+      <StructuredData
+        locale={locale}
+        page={{
+          title: structuredDataTitle,
+          description: structuredDataDescription,
+          url: getLocalizedUrl(locale, `/project/${slug}/`),
+        }}
+      />
       {heroSection && (
         <Section>
           <div className="flex w-full flex-col items-start gap-12">

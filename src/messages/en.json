@@ -3,6 +3,13 @@
     "brand": "REINTEN TECH",
     "allWork": "← All work"
   },
+  "Metadata": {
+    "homeTitle": "Custom Software & DevOps | Reinten Tech",
+    "homeDescription": "Custom software, reliable infrastructure, and ongoing support from one expert team.",
+    "projectFallbackTitle": "Project case study",
+    "projectFallbackDescription": "A software project delivered by Reinten Tech.",
+    "openGraphImageAlt": "Reinten Tech — custom software and DevOps"
+  },
   "Localization": {
     "buttonLabel": "Change language",
     "title": "Select language"

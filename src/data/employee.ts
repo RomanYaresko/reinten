@@ -4,7 +4,7 @@ import { assetPath } from '@/lib/paths';
 export const employees: EmployeeData[] = [
   {
     id: 1,
-    image: assetPath('/data/employee/vitaliy-prymak.jpg'),
+    image: assetPath('/data/employee/vitaliy-prymak.webp'),
     firstName: 'Vitaliy',
     lastName: 'Prymak',
     description: {
@@ -20,25 +20,39 @@ export const employees: EmployeeData[] = [
   },
   {
     id: 2,
-    image: assetPath('/data/employee/mykyta-diadiunov.jpg'),
+    image: assetPath('/data/employee/mykyta-diadiunov.webp'),
     firstName: 'Mykyta',
     lastName: 'Diadiunov',
-    description: { en: 'Engineer', pl: 'Inżynier', uk: 'Інженер', ru: 'Инженер', es: 'Ingeniero', de: 'Ingenieur' },
+    description: {
+      en: 'Engineer',
+      pl: 'Inżynier',
+      uk: 'Інженер',
+      ru: 'Инженер',
+      es: 'Ingeniero',
+      de: 'Ingenieur',
+    },
     linkedInLink: 'https://www.linkedin.com/in/mykyta-diadiunov-633ab125b/',
     isFounder: false,
   },
   {
     id: 3,
-    image: assetPath('/data/employee/serhii-kolodiazhnyi.jpg'),
+    image: assetPath('/data/employee/serhii-kolodiazhnyi.webp'),
     firstName: 'Serhii',
     lastName: 'Kolodiazhnyi',
-    description: { en: 'Engineer', pl: 'Inżynier', uk: 'Інженер', ru: 'Инженер', es: 'Ingeniero', de: 'Ingenieur' },
+    description: {
+      en: 'Engineer',
+      pl: 'Inżynier',
+      uk: 'Інженер',
+      ru: 'Инженер',
+      es: 'Ingeniero',
+      de: 'Ingenieur',
+    },
     linkedInLink: 'https://www.linkedin.com/in/serhii-kolodiazhnyi-22525a25b/',
     isFounder: false,
   },
   {
     id: 4,
-    image: assetPath('/data/employee/maria-yastriebova.jpg'),
+    image: assetPath('/data/employee/maria-yastriebova.webp'),
     firstName: 'Maria',
     lastName: 'Yastriebova',
     description: {
@@ -54,7 +68,7 @@ export const employees: EmployeeData[] = [
   },
   {
     id: 5,
-    image: assetPath('/data/employee/pavel-moroz.png'),
+    image: assetPath('/data/employee/pavel-moroz.webp'),
     firstName: 'Pavel',
     lastName: 'Moroz',
     description: {

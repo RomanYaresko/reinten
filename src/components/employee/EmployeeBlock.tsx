@@ -12,14 +12,7 @@ export default function EmployeeBlock({ employee }: EmployeeBlockProps) {
     <a href={employee.linkedInLink} className="flex items-center gap-6">
       <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full bg-dark-subtle">
         {employee.image && (
-          <Image
-            src={employee.image}
-            alt={name}
-            fill
-            sizes="56px"
-            className="object-cover"
-            unoptimized
-          />
+          <Image src={employee.image} alt={name} fill sizes="56px" className="object-cover" />
         )}
       </div>
       <div className="flex align-start justify-center flex-col text-left text-[14px]/[1.55] text-light-tertiary">

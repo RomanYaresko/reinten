@@ -73,7 +73,6 @@ export default function ProjectGallery({ images, maxRowRatio = 3 }: ProjectGalle
                   height={image.ratio.y}
                   sizes="100vw"
                   className="block h-auto w-full"
-                  unoptimized
                 />
               </div>
               <figcaption className="mt-4 text-code text-light-muted uppercase tracking-[0.18em] text-[11.5px]/[1]">

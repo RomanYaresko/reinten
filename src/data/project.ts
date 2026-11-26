@@ -426,12 +426,12 @@ export const projectDetails: ProjectDetailsData[] = [
 ];
 
 export const selectedProjectsImages: string[] = [
-  assetPath('/data/placeholders/1.jpg&text=Logo+1'),
-  assetPath('/data/placeholders/2.jpg&text=Screenshot+1'),
-  assetPath('/data/placeholders/3.jpg&text=Screenshot+2'),
-  assetPath('/data/placeholders/4.jpg&text=Screenshot+3'),
-  assetPath('/data/placeholders/5.jpg&text=Logo+2'),
-  assetPath('/data/placeholders/6.jpg&text=Screenshot+4'),
-  assetPath('/data/placeholders/7.jpg&text=Screenshot+5'),
-  assetPath('/data/placeholders/8.jpg&text=Screenshot+6'),
+  assetPath('/data/placeholders/1.webp'),
+  assetPath('/data/placeholders/2.webp'),
+  assetPath('/data/placeholders/3.webp'),
+  assetPath('/data/placeholders/4.webp'),
+  assetPath('/data/placeholders/5.webp'),
+  assetPath('/data/placeholders/6.webp'),
+  assetPath('/data/placeholders/7.webp'),
+  assetPath('/data/placeholders/8.webp'),
 ];

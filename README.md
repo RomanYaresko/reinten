@@ -19,6 +19,12 @@ This application is built using **Next.js** and **React**.
 - **Server Components:** Used by default for React components that do not require client-side interactivity.
 - **Client Components:** Used only when necessary, currently in `Section.tsx`, which relies on Motion for scroll-based animations.
 
+## SEO and Images
+
+- Set `NEXT_PUBLIC_SITE_URL` to the deployed site origin in the build environment. The production `/reinten` base path is added automatically.
+- Add the 1200x630 social preview image at `public/images/og-image.png`.
+- Images are pre-optimized as WebP for the static export; new images should be optimized before being added.
+
 ## Project Architecture
 
 ```text

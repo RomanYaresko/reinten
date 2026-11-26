@@ -3,6 +3,13 @@
     "brand": "REINTEN TECH",
     "allWork": "← Todo el trabajo"
   },
+  "Metadata": {
+    "homeTitle": "Software a medida y DevOps | Reinten Tech",
+    "homeDescription": "Desarrollamos software a medida, gestionamos una infraestructura fiable y ofrecemos soporte continuo con un solo equipo experto.",
+    "projectFallbackTitle": "Caso de proyecto",
+    "projectFallbackDescription": "Un proyecto de software realizado por Reinten Tech.",
+    "openGraphImageAlt": "Reinten Tech — software a medida y DevOps"
+  },
   "Localization": {
     "buttonLabel": "Cambiar idioma",
     "title": "Selecciona un idioma"

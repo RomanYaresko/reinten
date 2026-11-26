@@ -3,6 +3,13 @@
     "brand": "REINTEN TECH",
     "allWork": "← Wszystkie realizacje"
   },
+  "Metadata": {
+    "homeTitle": "Dedykowane oprogramowanie i DevOps | Reinten Tech",
+    "homeDescription": "Tworzymy dedykowane oprogramowanie, zarządzamy niezawodną infrastrukturą i wspieramy firmy w codziennym działaniu.",
+    "projectFallbackTitle": "Realizacja projektowa",
+    "projectFallbackDescription": "Projekt oprogramowania zrealizowany przez Reinten Tech.",
+    "openGraphImageAlt": "Reinten Tech — dedykowane oprogramowanie i DevOps"
+  },
   "Localization": {
     "buttonLabel": "Zmień język",
     "title": "Wybierz język"

@@ -23,7 +23,6 @@ export default async function Marquee({ images }: MarqueeProps) {
               width={1000}
               height={600}
               className="h-auto max-h-40 w-auto max-w-none rounded border border-dark-subtle"
-              unoptimized
             />
           </div>
         ))}

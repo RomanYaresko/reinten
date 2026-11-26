@@ -3,6 +3,13 @@
     "brand": "REINTEN TECH",
     "allWork": "← Все работы"
   },
+  "Metadata": {
+    "homeTitle": "Разработка ПО и DevOps | Reinten Tech",
+    "homeDescription": "Разрабатываем программное обеспечение, обеспечиваем надежную инфраструктуру и постоянную поддержку — одна команда экспертов.",
+    "projectFallbackTitle": "Описание проекта",
+    "projectFallbackDescription": "Проект по разработке программного обеспечения от Reinten Tech.",
+    "openGraphImageAlt": "Reinten Tech — разработка программного обеспечения и DevOps"
+  },
   "Localization": {
     "buttonLabel": "Сменить язык",
     "title": "Выберите язык"
