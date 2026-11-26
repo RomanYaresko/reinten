@@ -3,6 +3,13 @@
     "brand": "REINTEN TECH",
     "allWork": "← All work"
   },
+  "Localization": {
+    "buttonLabel": "Change language",
+    "title": "Select language"
+  },
+  "Modal": {
+    "closeLabel": "Close modal"
+  },
   "Footer": {
     "copyright": "© {year} Reinten Tech"
   },

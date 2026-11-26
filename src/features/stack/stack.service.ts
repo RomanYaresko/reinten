@@ -1,6 +1,11 @@
 import { stacks } from '@/data/stack';
-import type { Stack } from '@/features/stack/stack.types';
+import type { Locale } from '@/i18n/routing';
+import type { Stack, StackData } from '@/features/stack/stack.types';
 
-export async function getStacks(): Promise<Stack[]> {
-  return stacks;
+export async function getStacks(locale: Locale): Promise<Stack[]> {
+  return stacks.map((stack: StackData) => ({
+    id: stack.id,
+    title: stack.title[locale],
+    technologies: stack.technologies,
+  }));
 }

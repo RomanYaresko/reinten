@@ -1,9 +1,16 @@
-import type { Stack } from '@/features/stack/stack.types';
+import type { StackData } from '@/features/stack/stack.types';
 
-export const stacks: Stack[] = [
+export const stacks: StackData[] = [
   {
     id: 1,
-    title: 'Infrastructure',
+    title: {
+      en: 'Infrastructure',
+      pl: 'Infrastruktura',
+      uk: 'Інфраструктура',
+      ru: 'Инфраструктура',
+      es: 'Infraestructura',
+      de: 'Infrastruktur',
+    },
     technologies: [
       'Kubernetes',
       'Docker',
@@ -18,7 +25,14 @@ export const stacks: Stack[] = [
   },
   {
     id: 2,
-    title: 'Backend',
+    title: {
+      en: 'Backend',
+      pl: 'Backend',
+      uk: 'Бекенд',
+      ru: 'Бэкенд',
+      es: 'Backend',
+      de: 'Backend',
+    },
     technologies: [
       'Go',
       'Gorm',
@@ -34,7 +48,14 @@ export const stacks: Stack[] = [
   },
   {
     id: 3,
-    title: 'Frontend',
+    title: {
+      en: 'Frontend',
+      pl: 'Frontend',
+      uk: 'Фронтенд',
+      ru: 'Фронтенд',
+      es: 'Frontend',
+      de: 'Frontend',
+    },
     technologies: ['Vue.js', 'Nuxt.js', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
   },
 ];

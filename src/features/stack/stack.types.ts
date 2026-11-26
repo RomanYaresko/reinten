@@ -1,5 +1,9 @@
-export interface Stack {
+import type { DataLocaleString } from '@/features/data/data.types';
+
+export interface Stack<Text = string> {
   id: number;
-  title: string;
+  title: Text;
   technologies: string[];
 }
+
+export type StackData = Stack<DataLocaleString>;

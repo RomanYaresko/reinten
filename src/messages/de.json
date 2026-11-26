@@ -1,0 +1,91 @@
+{
+  "Header": {
+    "brand": "REINTEN TECH",
+    "allWork": "← Alle Arbeiten"
+  },
+  "Localization": {
+    "buttonLabel": "Sprache wechseln",
+    "title": "Sprache auswählen"
+  },
+  "Modal": {
+    "closeLabel": "Modal schließen"
+  },
+  "Footer": {
+    "copyright": "© {year} Reinten Tech"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Maßgeschneiderte Software. Zuverlässige Infrastruktur. Ein Expertenteam.",
+      "description": "Wir entwickeln maßgeschneiderte Software, betreiben die dahinterliegende Infrastruktur und halten alles am Laufen. Ein Team, direkte Kommunikation, keine Übergaben."
+    },
+    "offers": {
+      "title": "Was wir anbieten.",
+      "bothLabel": "Oder beides",
+      "bothDescription": "— ein Team entwickelt, liefert und betreibt. Keine Übergaben."
+    },
+    "stack": {
+      "title": "Der Stack, mit dem wir tatsächlich arbeiten."
+    },
+    "team": {
+      "title": "Die Menschen, mit denen Sie arbeiten werden.",
+      "profileLink": "LinkedIn →"
+    },
+    "process": {
+      "title": "Klein anfangen. Entscheidungen mit Fakten treffen.",
+      "call": {
+        "title": "Gespräch",
+        "description": "30 Minuten mit dem Gründer über Ihre Anforderungen.",
+        "subtitle": "30 Minuten"
+      },
+      "scope": {
+        "title": "Umfang / Audit",
+        "description": "Wir legen fest, was gebaut oder welche Risiken behoben werden müssen. Festpreis, vorab vereinbart.",
+        "subtitle": "1–4 Wochen"
+      },
+      "build": {
+        "title": "Umsetzung / Behebung",
+        "description": "Alle zwei Wochen funktionierende Ergebnisse statt einer Überraschung am Ende.",
+        "subtitle": "Abhängig vom Umfang"
+      },
+      "support": {
+        "title": "Support",
+        "description": "Wir betreuen monatlich weiter oder übergeben alles dokumentiert.",
+        "subtitle": "Laufend"
+      }
+    },
+    "projects": {
+      "title": "Ausgewählte Arbeiten."
+    },
+    "objections": {
+      "title": "Bevor Sie buchen.",
+      "cost": {
+        "title": "Was kostet es?",
+        "description": "Projekte und Audits haben einen Festpreis, der vor Beginn vereinbart wird. Laufende Arbeiten werden monatlich abgerechnet. Keine Überraschungen auf der Rechnung."
+      },
+      "developer": {
+        "title": "Wir haben bereits einen Entwickler dafür.",
+        "description": "So beginnt es meist — bis er zwischen Feature-Entwicklung und Feuerlöschen feststeckt. Wir übernehmen die Infrastruktur und dokumentieren alles."
+      },
+      "availability": {
+        "title": "Sie sind ein kleines Team. Was ist, wenn jemand ausfällt?",
+        "description": "Alles, was wir bauen, ist automatisiert und dokumentiert — nichts hängt von einer Person ab. Wir sind offen bei Grenzen: Wir verkaufen keinen 24/7-Notdienst."
+      }
+    }
+  },
+  "BookingButton": {
+    "label": "30-minütiges Gespräch buchen"
+  },
+  "ImageBlock": {
+    "defaultAlt": "Bild"
+  },
+  "Marquee": {
+    "itemAlt": "Ausgewähltes Projekt"
+  },
+  "ProjectCard": {
+    "imageAlt": "Projektbild {title}",
+    "readCase": "Fallstudie lesen →"
+  },
+  "ProjectPage": {
+    "contactHeading": "Noch kein System? Lassen Sie uns sprechen."
+  }
+}

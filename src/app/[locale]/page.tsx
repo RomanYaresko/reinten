@@ -26,7 +26,7 @@ export default async function MainPage({ params }: MainPageProps) {
   const [offers, employees, stacks, projects, selectedProjectsImages, founder] = await Promise.all([
     getOffers(locale),
     getEmployees(locale),
-    getStacks(),
+    getStacks(locale),
     getProjects(locale),
     getSelectedProjectsImages(),
     getFounder(locale),

@@ -1,0 +1,91 @@
+{
+  "Header": {
+    "brand": "REINTEN TECH",
+    "allWork": "← Todo el trabajo"
+  },
+  "Localization": {
+    "buttonLabel": "Cambiar idioma",
+    "title": "Selecciona un idioma"
+  },
+  "Modal": {
+    "closeLabel": "Cerrar ventana"
+  },
+  "Footer": {
+    "copyright": "© {year} Reinten Tech"
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Software a medida. Infraestructura fiable. Un único equipo experto.",
+      "description": "Creamos software a medida, gestionamos la infraestructura que lo respalda y mantenemos todo funcionando. Un equipo, comunicación directa, sin traspasos."
+    },
+    "offers": {
+      "title": "Qué ofrecemos.",
+      "bothLabel": "O ambos",
+      "bothDescription": "— un único equipo lo crea, despliega y mantiene. Sin traspasos."
+    },
+    "stack": {
+      "title": "El stack con el que realmente trabajamos."
+    },
+    "team": {
+      "title": "Las personas con las que trabajarás.",
+      "profileLink": "LinkedIn →"
+    },
+    "process": {
+      "title": "Empieza poco a poco. Decide con datos.",
+      "call": {
+        "title": "Llamada",
+        "description": "30 minutos con el fundador para hablar de lo que necesitas.",
+        "subtitle": "30 minutos"
+      },
+      "scope": {
+        "title": "Alcance / auditoría",
+        "description": "Definimos qué construir o qué riesgos hay. Precio fijo acordado por adelantado.",
+        "subtitle": "1–4 semanas"
+      },
+      "build": {
+        "title": "Construcción / solución",
+        "description": "Resultados funcionales cada dos semanas, no una sorpresa al final.",
+        "subtitle": "Según el alcance"
+      },
+      "support": {
+        "title": "Soporte",
+        "description": "Seguimos mensualmente o entregamos todo documentado.",
+        "subtitle": "Continuo"
+      }
+    },
+    "projects": {
+      "title": "Trabajo seleccionado."
+    },
+    "objections": {
+      "title": "Antes de reservar.",
+      "cost": {
+        "title": "¿Cuánto cuesta?",
+        "description": "Los proyectos y auditorías tienen un precio fijo acordado antes de empezar. El trabajo continuo se factura mensualmente. Sin sorpresas en la factura."
+      },
+      "developer": {
+        "title": "Ya tenemos un desarrollador para esto.",
+        "description": "Normalmente así empieza — hasta que queda atrapado entre añadir funciones y resolver incidentes. Nosotros nos encargamos de la infraestructura y la dejamos documentada."
+      },
+      "availability": {
+        "title": "Sois un equipo pequeño. ¿Qué pasa si falta alguien?",
+        "description": "Todo lo que construimos está automatizado y documentado: nada depende de una sola persona. También somos claros con nuestros límites: no ofrecemos guardias 24/7."
+      }
+    }
+  },
+  "BookingButton": {
+    "label": "Reservar una llamada de 30 min"
+  },
+  "ImageBlock": {
+    "defaultAlt": "Imagen"
+  },
+  "Marquee": {
+    "itemAlt": "Proyecto seleccionado"
+  },
+  "ProjectCard": {
+    "imageAlt": "Imagen del proyecto {title}",
+    "readCase": "Ver caso →"
+  },
+  "ProjectPage": {
+    "contactHeading": "¿Aún no tienes un sistema? Hablemos."
+  }
+}
